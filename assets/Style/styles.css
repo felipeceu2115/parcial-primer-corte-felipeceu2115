@@ -1,0 +1,114 @@
+
+*{
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 15px; 
+}
+
+body{
+    background-color: rgb(47, 44, 51);
+    
+}
+
+#main{
+    
+    background-color: white;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: auto;
+    width: 55%;
+    justify-content: stretch;
+    padding: 30px;
+    
+}
+
+.left{
+    padding: 20px;
+}
+
+h1{
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 50px;
+} 
+
+.img-container{
+    max-width: 100%;
+    width: 500px;
+    
+}
+
+.lista{
+    list-style-image: url(./../assets/images/icon-list.svg);
+    line-height: 2;
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: 25px;
+
+}
+
+input{
+    height: 60px;
+    width: 100%;
+    border-radius: 10px;
+    color: rgb(160, 158, 158);
+    border: 1px solid rgb(160, 160, 160);
+    text-indent: 25px;
+    font-size: medium;
+}
+
+.email{
+    font-size: small;
+    font-weight: bold;
+}
+
+#btnHideMain{
+    height: 60px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 25px;
+    background-color: rgb(31, 31, 59);
+    color: aliceblue;
+    font-size: medium;
+}
+
+#alert{
+    background-color: white;
+    display: none;
+    width: 25%;
+    margin: auto;
+    border-radius: 20px;
+    padding: 50px;
+    justify-content: stretch;
+}
+
+.btnHideAlert{
+    height: 60px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 25px;
+    background-color: rgb(220, 73, 32);
+    border-color: white;
+    color: white;
+}
+
+span{
+    font-weight: bold;
+}
+
+p{
+    line-height: 1.5;
+}
+
+.notifications{
+    display: grid;
+    grid-template-columns: auto 50%;
+}
+.error{
+    color: red;
+    display: none;
+}
+
+
+
+
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" type="text/css" href = "./style/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div id = "main">
+    <div class = "caja left">
+      <div>
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+        <ul class = "lista">
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li> And much more!</li>
+        </ul>
+      </div>
+      
+      
+
+      <div>
+        <div class="notifications">
+          <p class="email">Email address</p>
+          <p class="email error">Valid email required</p>
+        </div>
+        
+
+        <input type="text" id="inpEmail" placeholder = "email@company.com">
+
+        <button id="btnHideMain" onclick="validarYCambiarDiv()">Subscribe to monthly newsletter</button>
+      </div>
+      
+    </div>
+
+    <div class = "caja img-conteiner">
+      <img src="./assets/images/illustration-sign-up-desktop.svg" alt="imagen" />
+    </div>
+
+  </div>
+
+
+  <div id="alert">
+    <div class="img-alert">
+      <img src="./assets/images/icon-success.svg" alt="listo">
+    </div>
+
+    <div> 
+      <h1>Thanks for subscribing!</h1>
+      <p>A confirmation email has been sent to <span id="emailSpan"></span>. 
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+    </div>
+
+    <button class="btnHideAlert" onclick="hideAlert()">Dismiss message</button>
+  </div>
+ 
+
+  <script >
+    function hideDive(){
+      document.getElementById("alert").style.display = "grid"
+      document.getElementById("main").style.display = "none";
+    }
+
+    function hideAlert(){
+      document.getElementById("alert").style.display = "none"
+      document.getElementById("main").style.display = "grid";
+    }
+   
+    function capturarEmail(){
+      var mail = document.getElementById("inpEmail").value;
+      var spanEmail = document.getElementById("emailSpan"); 
+      spanEmail.textContent = mail;
+      
+    }
+
+    function validarYCambiarDiv() {
+    var mail = document.getElementById("inpEmail").value;
+    var emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail);
+    if (emailValido) {
+      hideDive(); 
+      capturarEmail(); 
+      
+    } else {
+      inpEmail.style.borderColor = "red";
+      document.getElementsByClassName("error").style.display = "grid";
+      
+      
+    }
+  }
+
+    
+
+  </script>
+</body>
+</html>
